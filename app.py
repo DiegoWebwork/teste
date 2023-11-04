@@ -7,6 +7,8 @@ import qrcode
 import asyncio
 import os
 
+os.environ['DISPLAY'] = ':0'
+
 app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
